@@ -1,19 +1,16 @@
 {
     "home": {
-        "title": "¡Bienvenido, Java Hipster!",
-        "subtitle": "Esta es su página de inicio",
+        "title": "¡Bienvenido a Invoister!",
         "logged": {
-            "message": "Está conectado como \"{{username}}\"."
+            "message": "Has iniciado sesión con la cuenta \"{{username}}\"."
         },
-        "question": "Si tiene preguntas sobre JHipster:",
+        "question": "Si tienes dudas sobre el proyecto:",
         "link": {
-            "homepage": "Página de inicio de JHipster",
-            "stackoverflow": "JHipster en Stack Overflow",
-            "bugtracker": "JHipster seguimiento de errores",
-            "chat": "Sala de chat pública de JHipster",
-            "follow": "contacto @java_hipster en Twitter"
+            "bugtracker": "Gestor de incidencias de Invoister",
+            "wiki": "Wiki de Invoister",
+            "repository": "Repositorio de Invoister"
         },
-        "like": "Si te gusta JHipster, danos una estrella en",
+        "like": "¡Si te gusta el proyecto, no te olvides de dar una estrella en",
         "github": "GitHub"
     }
 }
