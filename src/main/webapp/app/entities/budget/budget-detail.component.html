@@ -1,0 +1,45 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="budget">
+            <h2><span jhiTranslate="invoisterApp.budget.detail.title">Budget</span> {{budget.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="invoisterApp.budget.date">Date</span></dt>
+                <dd>
+                    <span>{{budget.date}}</span>
+                </dd>
+                <dt><span jhiTranslate="invoisterApp.budget.body">Body</span></dt>
+                <dd>
+                    <span>{{budget.body}}</span>
+                </dd>
+                <dt><span jhiTranslate="invoisterApp.budget.grossCost">Gross Cost</span></dt>
+                <dd>
+                    <span>{{budget.grossCost}}</span>
+                </dd>
+                <dt><span jhiTranslate="invoisterApp.budget.tax">Tax</span></dt>
+                <dd>
+                    <span>{{budget.tax}}</span>
+                </dd>
+                <dt><span jhiTranslate="invoisterApp.budget.company">Company</span></dt>
+                <dd>
+                    <div *ngIf="budget.companyId">
+                        <a [routerLink]="['/company', budget.companyId, 'view']">{{budget.companyId}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/budget', budget.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

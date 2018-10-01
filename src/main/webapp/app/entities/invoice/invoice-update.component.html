@@ -1,0 +1,117 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+            <h2 id="jhi-invoice-heading" jhiTranslate="invoisterApp.invoice.home.createOrEditLabel">Create or edit a Invoice</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!invoice.id">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id"
+                        [(ngModel)]="invoice.id" readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="invoisterApp.invoice.date" for="field_date">Date</label>
+                    <div class="input-group">
+                        <input id="field_date" type="text" class="form-control" name="date" ngbDatepicker  #dateDp="ngbDatepicker" [(ngModel)]="invoice.date"
+                        required/>
+                        <span class="input-group-append">
+                            <button type="button" class="btn btn-secondary" (click)="dateDp.toggle()"><fa-icon [icon]="'calendar-alt'"></fa-icon></button>
+                        </span>
+                    </div>
+                    <div [hidden]="!(editForm.controls.date?.dirty && editForm.controls.date?.invalid)">
+                        <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.date?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="invoisterApp.invoice.tax" for="field_tax">Tax</label>
+                    <input type="number" class="form-control" name="tax" id="field_tax"
+                        [(ngModel)]="invoice.tax" required/>
+                    <div [hidden]="!(editForm.controls.tax?.dirty && editForm.controls.tax?.invalid)">
+                        <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.tax?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.controls.tax?.errors?.number" jhiTranslate="entity.validation.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="invoisterApp.invoice.paymentForm" for="field_paymentForm">Payment Form</label>
+                    <select class="form-control" name="paymentForm" [(ngModel)]="invoice.paymentForm" id="field_paymentForm"  required>
+                        <option value="PAYPAL">{{'invoisterApp.PaymentForm.PAYPAL' | translate}}</option>
+                        <option value="BANKTRANSFER">{{'invoisterApp.PaymentForm.BANKTRANSFER' | translate}}</option>
+                        <option value="OTHER">{{'invoisterApp.PaymentForm.OTHER' | translate}}</option>
+                    </select>
+                    <div [hidden]="!(editForm.controls.paymentForm?.dirty && editForm.controls.paymentForm?.invalid)">
+                        <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.paymentForm?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="invoisterApp.invoice.paymentDetails" for="field_paymentDetails">Payment Details</label>
+                    <input type="text" class="form-control" name="paymentDetails" id="field_paymentDetails"
+                        [(ngModel)]="invoice.paymentDetails" required/>
+                    <div [hidden]="!(editForm.controls.paymentDetails?.dirty && editForm.controls.paymentDetails?.invalid)">
+                        <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.paymentDetails?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="invoisterApp.invoice.paymentDate" for="field_paymentDate">Payment Date</label>
+                    <div class="input-group">
+                        <input id="field_paymentDate" type="text" class="form-control" name="paymentDate" ngbDatepicker  #paymentDateDp="ngbDatepicker" [(ngModel)]="invoice.paymentDate"
+                        required/>
+                        <span class="input-group-append">
+                            <button type="button" class="btn btn-secondary" (click)="paymentDateDp.toggle()"><fa-icon [icon]="'calendar-alt'"></fa-icon></button>
+                        </span>
+                    </div>
+                    <div [hidden]="!(editForm.controls.paymentDate?.dirty && editForm.controls.paymentDate?.invalid)">
+                        <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.paymentDate?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="invoisterApp.invoice.status" for="field_status">Status</label>
+                    <select class="form-control" name="status" [(ngModel)]="invoice.status" id="field_status"  required>
+                        <option value="PAID">{{'invoisterApp.InvoiceStatus.PAID' | translate}}</option>
+                        <option value="ISSUED">{{'invoisterApp.InvoiceStatus.ISSUED' | translate}}</option>
+                        <option value="CANCELLED">{{'invoisterApp.InvoiceStatus.CANCELLED' | translate}}</option>
+                    </select>
+                    <div [hidden]="!(editForm.controls.status?.dirty && editForm.controls.status?.invalid)">
+                        <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.status?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="invoisterApp.invoice.company" for="field_company">Company</label>
+                    <select class="form-control" id="field_company" name="company" [(ngModel)]="invoice.companyId" >
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="companyOption.id" *ngFor="let companyOption of companies; trackBy: trackCompanyById">{{companyOption.id}}</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

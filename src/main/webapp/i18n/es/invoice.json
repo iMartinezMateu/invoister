@@ -1,0 +1,30 @@
+
+{
+    "invoisterApp": {
+        "invoice" : {
+            "home": {
+                "title": "Invoices",
+                "createLabel": "Crear nuevo Invoice",
+                "createOrEditLabel": "Crear o editar Invoice",
+                "search": "Search for Invoice"
+            },
+            "created": "Un nuevo Invoice ha sido creado con el identificador {{ param }}",
+            "updated": "Un Invoice ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Invoice ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Invoice {{ id }}?"
+            },
+            "detail": {
+                "title": "Invoice"
+            },
+            "date": "Date",
+            "tax": "Tax",
+            "paymentForm": "Payment Form",
+            "paymentDetails": "Payment Details",
+            "paymentDate": "Payment Date",
+            "status": "Status",
+            "company": "Company",
+            "invoiceItem": "Invoice Item"
+        }
+    }
+}

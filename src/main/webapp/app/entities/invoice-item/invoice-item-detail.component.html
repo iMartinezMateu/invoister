@@ -1,0 +1,41 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="invoiceItem">
+            <h2><span jhiTranslate="invoisterApp.invoiceItem.detail.title">Invoice Item</span> {{invoiceItem.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="invoisterApp.invoiceItem.description">Description</span></dt>
+                <dd>
+                    <span>{{invoiceItem.description}}</span>
+                </dd>
+                <dt><span jhiTranslate="invoisterApp.invoiceItem.quantity">Quantity</span></dt>
+                <dd>
+                    <span>{{invoiceItem.quantity}}</span>
+                </dd>
+                <dt><span jhiTranslate="invoisterApp.invoiceItem.grossCost">Gross Cost</span></dt>
+                <dd>
+                    <span>{{invoiceItem.grossCost}}</span>
+                </dd>
+                <dt><span jhiTranslate="invoisterApp.invoiceItem.invoice">Invoice</span></dt>
+                <dd>
+                    <span *ngFor="let invoice of invoiceItem.invoices; let last = last">
+                        <a [routerLink]="['/invoice', invoice?.id, 'view' ]">{{invoice.id}}</a>{{last ? '' : ', '}}
+                    </span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/invoice-item', invoiceItem.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

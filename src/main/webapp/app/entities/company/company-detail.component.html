@@ -1,0 +1,82 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="company">
+            <h2><span jhiTranslate="invoisterApp.company.detail.title">Company</span> {{company.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="invoisterApp.company.title">Title</span></dt>
+                <dd>
+                    <span>{{company.title}}</span>
+                </dd>
+                <dt><span jhiTranslate="invoisterApp.company.cId">C Id</span></dt>
+                <dd>
+                    <span>{{company.cId}}</span>
+                </dd>
+                <dt><span jhiTranslate="invoisterApp.company.mainPhoneNumber">Main Phone Number</span></dt>
+                <dd>
+                    <span>{{company.mainPhoneNumber}}</span>
+                </dd>
+                <dt><span jhiTranslate="invoisterApp.company.secondaryPhoneNumber">Secondary Phone Number</span></dt>
+                <dd>
+                    <span>{{company.secondaryPhoneNumber}}</span>
+                </dd>
+                <dt><span jhiTranslate="invoisterApp.company.email">Email</span></dt>
+                <dd>
+                    <span>{{company.email}}</span>
+                </dd>
+                <dt><span jhiTranslate="invoisterApp.company.address">Address</span></dt>
+                <dd>
+                    <span>{{company.address}}</span>
+                </dd>
+                <dt><span jhiTranslate="invoisterApp.company.paypalAccount">Paypal Account</span></dt>
+                <dd>
+                    <span>{{company.paypalAccount}}</span>
+                </dd>
+                <dt><span jhiTranslate="invoisterApp.company.bankAccount">Bank Account</span></dt>
+                <dd>
+                    <span>{{company.bankAccount}}</span>
+                </dd>
+                <dt><span jhiTranslate="invoisterApp.company.logo">Logo</span></dt>
+                <dd>
+                    <div *ngIf="company.logo">
+                        <a (click)="openFile(company.logoContentType, company.logo)">
+                            <img [src]="'data:' + company.logoContentType + ';base64,' + company.logo" style="max-width: 100%;" alt="company image"/>
+                        </a>
+                        {{company.logoContentType}}, {{byteSize(company.logo)}}
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="invoisterApp.company.secondaryLogo">Secondary Logo</span></dt>
+                <dd>
+                    <div *ngIf="company.secondaryLogo">
+                        <a (click)="openFile(company.secondaryLogoContentType, company.secondaryLogo)">
+                            <img [src]="'data:' + company.secondaryLogoContentType + ';base64,' + company.secondaryLogo" style="max-width: 100%;" alt="company image"/>
+                        </a>
+                        {{company.secondaryLogoContentType}}, {{byteSize(company.secondaryLogo)}}
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="invoisterApp.company.stamp">Stamp</span></dt>
+                <dd>
+                    <div *ngIf="company.stamp">
+                        <a (click)="openFile(company.stampContentType, company.stamp)">
+                            <img [src]="'data:' + company.stampContentType + ';base64,' + company.stamp" style="max-width: 100%;" alt="company image"/>
+                        </a>
+                        {{company.stampContentType}}, {{byteSize(company.stamp)}}
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/company', company.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

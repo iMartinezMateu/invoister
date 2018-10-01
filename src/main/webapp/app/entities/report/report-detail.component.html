@@ -1,0 +1,41 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="report">
+            <h2><span jhiTranslate="invoisterApp.report.detail.title">Report</span> {{report.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="invoisterApp.report.rId">R Id</span></dt>
+                <dd>
+                    <span>{{report.rId}}</span>
+                </dd>
+                <dt><span jhiTranslate="invoisterApp.report.date">Date</span></dt>
+                <dd>
+                    <span>{{report.date}}</span>
+                </dd>
+                <dt><span jhiTranslate="invoisterApp.report.body">Body</span></dt>
+                <dd>
+                    <span>{{report.body}}</span>
+                </dd>
+                <dt><span jhiTranslate="invoisterApp.report.company">Company</span></dt>
+                <dd>
+                    <div *ngIf="report.companyId">
+                        <a [routerLink]="['/company', report.companyId, 'view']">{{report.companyId}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/report', report.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

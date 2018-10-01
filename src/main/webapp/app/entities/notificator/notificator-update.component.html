@@ -1,0 +1,104 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+            <h2 id="jhi-notificator-heading" jhiTranslate="invoisterApp.notificator.home.createOrEditLabel">Create or edit a Notificator</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!notificator.id">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id"
+                        [(ngModel)]="notificator.id" readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="invoisterApp.notificator.smtpHost" for="field_smtpHost">Smtp Host</label>
+                    <input type="text" class="form-control" name="smtpHost" id="field_smtpHost"
+                        [(ngModel)]="notificator.smtpHost" required/>
+                    <div [hidden]="!(editForm.controls.smtpHost?.dirty && editForm.controls.smtpHost?.invalid)">
+                        <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.smtpHost?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="invoisterApp.notificator.smtpPort" for="field_smtpPort">Smtp Port</label>
+                    <input type="number" class="form-control" name="smtpPort" id="field_smtpPort"
+                        [(ngModel)]="notificator.smtpPort" required/>
+                    <div [hidden]="!(editForm.controls.smtpPort?.dirty && editForm.controls.smtpPort?.invalid)">
+                        <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.smtpPort?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                        <small class="form-text text-danger"
+                            [hidden]="!editForm.controls.smtpPort?.errors?.number" jhiTranslate="entity.validation.number">
+                            This field should be a number.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="invoisterApp.notificator.smtpAuth" for="field_smtpAuth">Smtp Auth</label>
+                    <input type="checkbox" class="form-control" name="smtpAuth" id="field_smtpAuth"
+                        [(ngModel)]="notificator.smtpAuth" />
+                    <div [hidden]="!(editForm.controls.smtpAuth?.dirty && editForm.controls.smtpAuth?.invalid)">
+                        <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.smtpAuth?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="invoisterApp.notificator.username" for="field_username">Username</label>
+                    <input type="text" class="form-control" name="username" id="field_username"
+                        [(ngModel)]="notificator.username" required/>
+                    <div [hidden]="!(editForm.controls.username?.dirty && editForm.controls.username?.invalid)">
+                        <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.username?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="invoisterApp.notificator.password" for="field_password">Password</label>
+                    <input type="text" class="form-control" name="password" id="field_password"
+                        [(ngModel)]="notificator.password" required/>
+                    <div [hidden]="!(editForm.controls.password?.dirty && editForm.controls.password?.invalid)">
+                        <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.password?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="invoisterApp.notificator.secureConnection" for="field_secureConnection">Secure Connection</label>
+                    <select class="form-control" name="secureConnection" [(ngModel)]="notificator.secureConnection" id="field_secureConnection"  required>
+                        <option value="NONE">{{'invoisterApp.SecureConnection.NONE' | translate}}</option>
+                        <option value="SSL">{{'invoisterApp.SecureConnection.SSL' | translate}}</option>
+                        <option value="TLS">{{'invoisterApp.SecureConnection.TLS' | translate}}</option>
+                    </select>
+                    <div [hidden]="!(editForm.controls.secureConnection?.dirty && editForm.controls.secureConnection?.invalid)">
+                        <small class="form-text text-danger"
+                        [hidden]="!editForm.controls.secureConnection?.errors?.required" jhiTranslate="entity.validation.required">
+                        This field is required.
+                        </small>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="invoisterApp.notificator.company" for="field_company">Company</label>
+                    <select class="form-control" id="field_company" name="company" [(ngModel)]="notificator.companyId" >
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="companyOption.id" *ngFor="let companyOption of companies; trackBy: trackCompanyById">{{companyOption.id}}</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,10 @@
+{
+    "invoisterApp": {
+        "PaymentForm" : {
+            "null": "",
+            "PAYPAL": "PAYPAL",
+            "BANKTRANSFER": "BANKTRANSFER",
+            "OTHER": "OTHER"
+        }
+    }
+}

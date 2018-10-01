@@ -1,0 +1,29 @@
+
+{
+    "invoisterApp": {
+        "notificator" : {
+            "home": {
+                "title": "Notificators",
+                "createLabel": "Crear nuevo Notificator",
+                "createOrEditLabel": "Crear o editar Notificator",
+                "search": "Search for Notificator"
+            },
+            "created": "Un nuevo Notificator ha sido creado con el identificador {{ param }}",
+            "updated": "Un Notificator ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Notificator ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Notificator {{ id }}?"
+            },
+            "detail": {
+                "title": "Notificator"
+            },
+            "smtpHost": "Smtp Host",
+            "smtpPort": "Smtp Port",
+            "smtpAuth": "Smtp Auth",
+            "username": "Username",
+            "password": "Password",
+            "secureConnection": "Secure Connection",
+            "company": "Company"
+        }
+    }
+}

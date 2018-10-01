@@ -1,0 +1,28 @@
+
+{
+    "invoisterApp": {
+        "costumer" : {
+            "home": {
+                "title": "Costumers",
+                "createLabel": "Crear nuevo Costumer",
+                "createOrEditLabel": "Crear o editar Costumer",
+                "search": "Search for Costumer"
+            },
+            "created": "Un nuevo Costumer ha sido creado con el identificador {{ param }}",
+            "updated": "Un Costumer ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Costumer ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Costumer {{ id }}?"
+            },
+            "detail": {
+                "title": "Costumer"
+            },
+            "name": "Name",
+            "cId": "C Id",
+            "address": "Address",
+            "phone": "Phone",
+            "email": "Email",
+            "company": "Company"
+        }
+    }
+}

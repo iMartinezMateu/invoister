@@ -1,0 +1,26 @@
+
+{
+    "invoisterApp": {
+        "invoiceItem" : {
+            "home": {
+                "title": "Invoice Items",
+                "createLabel": "Crear nuevo Invoice Item",
+                "createOrEditLabel": "Crear o editar Invoice Item",
+                "search": "Search for Invoice Item"
+            },
+            "created": "Un nuevo Invoice Item ha sido creado con el identificador {{ param }}",
+            "updated": "Un Invoice Item ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Invoice Item ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Invoice Item {{ id }}?"
+            },
+            "detail": {
+                "title": "Invoice Item"
+            },
+            "description": "Description",
+            "quantity": "Quantity",
+            "grossCost": "Gross Cost",
+            "invoice": "Invoice"
+        }
+    }
+}

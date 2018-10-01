@@ -1,0 +1,93 @@
+enum PaymentForm {
+	PAYPAL, BANKTRANSFER, OTHER
+}
+
+enum InvoiceStatus {
+	PAID, ISSUED, CANCELLED
+}
+
+enum SecureConnection {
+	NONE, SSL, TLS
+}
+
+entity Company {
+	title String required,
+	cId String required,
+	mainPhoneNumber String required
+	secondaryPhoneNumber String required
+    email String required pattern(/^[^@\s]+@[^@\s]+\.[^@\s]+$/)
+    address String required
+    paypalAccount String
+    bankAccount String
+    logo ImageBlob
+    secondaryLogo ImageBlob
+    stamp ImageBlob
+}
+
+entity Notificator {
+	smtpHost String required
+	smtpPort Integer required
+	smtpAuth Boolean required
+	username String required
+	password String required
+	secureConnection SecureConnection required
+}
+
+entity Costumer {
+	name String required
+    cId String required
+    address String required
+    phone String required
+    email String required pattern(/^[^@\s]+@[^@\s]+\.[^@\s]+$/)
+}
+
+entity Invoice {
+	date LocalDate required
+    tax Integer required
+    paymentForm PaymentForm required
+    paymentDetails String required
+    paymentDate LocalDate required
+    status InvoiceStatus required
+}
+
+entity InvoiceItem {
+	description String required
+    quantity Integer required
+    grossCost Double required
+}
+
+entity Report {
+	rId String required
+	date LocalDate required
+    body TextBlob required
+}
+
+entity Budget {
+	date LocalDate required
+    body TextBlob required
+    grossCost Double required
+    tax Integer required
+}
+
+relationship OneToMany{
+  Company{notificator} to Notificator{company},
+  Company{costumer} to Costumer{company},
+  Company{invoice} to Invoice{company},
+  Company{budget} to Budget{company},
+  Company{report} to Report{company},
+}
+
+relationship ManyToMany{
+  InvoiceItem{invoice} to Invoice{invoiceItem}
+}
+
+
+// Set pagination options
+paginate Company, Costumer, Invoice, Report, Budget  with pagination
+
+// Use Data Transfert Objects (DTO)
+dto * with mapstruct
+
+// Set service options to all 
+service all with serviceImpl 
+

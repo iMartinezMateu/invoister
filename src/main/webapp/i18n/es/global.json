@@ -7,6 +7,12 @@
             "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
             "entities": {
                 "main": "Entidades",
+                "company": "Company",
+                "costumer": "Costumer",
+                "invoice": "Invoice",
+                "report": "Report",
+                "budget": "Budget",
+                "notificator": "Notificator",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {

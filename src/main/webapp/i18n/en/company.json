@@ -1,0 +1,38 @@
+
+{
+    "invoisterApp": {
+        "company" : {
+            "home": {
+                "title": "Companies",
+                "createLabel": "Create a new Company",
+                "createOrEditLabel": "Create or edit a Company",
+                "search": "Search for Company"
+            },
+            "created": "A new Company is created with identifier {{ param }}",
+            "updated": "A Company is updated with identifier {{ param }}",
+            "deleted": "A Company is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Company {{ id }}?"
+            },
+            "detail": {
+                "title": "Company"
+            },
+            "title": "Title",
+            "cId": "C Id",
+            "mainPhoneNumber": "Main Phone Number",
+            "secondaryPhoneNumber": "Secondary Phone Number",
+            "email": "Email",
+            "address": "Address",
+            "paypalAccount": "Paypal Account",
+            "bankAccount": "Bank Account",
+            "logo": "Logo",
+            "secondaryLogo": "Secondary Logo",
+            "stamp": "Stamp",
+            "notificator": "Notificator",
+            "costumer": "Costumer",
+            "invoice": "Invoice",
+            "budget": "Budget",
+            "report": "Report"
+        }
+    }
+}
