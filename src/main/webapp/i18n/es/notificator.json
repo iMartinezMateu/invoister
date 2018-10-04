@@ -3,27 +3,27 @@
     "invoisterApp": {
         "notificator" : {
             "home": {
-                "title": "Notificators",
-                "createLabel": "Crear nuevo Notificator",
-                "createOrEditLabel": "Crear o editar Notificator",
-                "search": "Search for Notificator"
+                "title": "Notificadores",
+                "createLabel": "Crear nuevo notificador",
+                "createOrEditLabel": "Crear o editar un notificador",
+                "search": "Buscar por notificador"
             },
-            "created": "Un nuevo Notificator ha sido creado con el identificador {{ param }}",
-            "updated": "Un Notificator ha sido actualizado con el identificador {{ param }}",
-            "deleted": "Un Notificator ha sido eliminado con el identificador {{ param }}",
+            "created": "Un nuevo notificador ha sido creado con el identificador {{ param }}",
+            "updated": "Un notificador ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un notificador ha sido eliminado con el identificador {{ param }}",
             "delete": {
-                "question": "¿Seguro que quiere eliminar Notificator {{ id }}?"
+                "question": "¿Seguro que quiere eliminar el notificador con el identificador {{ id }}?"
             },
             "detail": {
-                "title": "Notificator"
+                "title": "Notificador"
             },
-            "smtpHost": "Smtp Host",
-            "smtpPort": "Smtp Port",
-            "smtpAuth": "Smtp Auth",
-            "username": "Username",
-            "password": "Password",
-            "secureConnection": "Secure Connection",
-            "company": "Company"
+            "smtpHost": "Dirección del servidor de correo electrónico",
+            "smtpPort": "Puerto del servidor de correo electrónico",
+            "smtpAuth": "Usar autenticación para la conexión con el servidor",
+            "username": "Usuario",
+            "password": "Contraseña",
+            "secureConnection": "Conexión segura",
+            "company": "Empresa"
         }
     }
 }

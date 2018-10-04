@@ -2,9 +2,9 @@
     "invoisterApp": {
         "InvoiceStatus" : {
             "null": "",
-            "PAID": "PAID",
-            "ISSUED": "ISSUED",
-            "CANCELLED": "CANCELLED"
+            "PAID": "Pagado",
+            "ISSUED": "Emitido",
+            "CANCELLED": "Cancelado"
         }
     }
 }

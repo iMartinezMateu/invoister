@@ -3,25 +3,25 @@
     "invoisterApp": {
         "budget" : {
             "home": {
-                "title": "Budgets",
-                "createLabel": "Crear nuevo Budget",
-                "createOrEditLabel": "Crear o editar Budget",
-                "search": "Search for Budget"
+                "title": "Presupuesto",
+                "createLabel": "Crear nuevo presupuesto",
+                "createOrEditLabel": "Crear o editar presupuesto",
+                "search": "Buscar presupuesto"
             },
-            "created": "Un nuevo Budget ha sido creado con el identificador {{ param }}",
-            "updated": "Un Budget ha sido actualizado con el identificador {{ param }}",
-            "deleted": "Un Budget ha sido eliminado con el identificador {{ param }}",
+            "created": "Un nuevo presupuesto ha sido creado con el identificador {{ param }}",
+            "updated": "Un presupuesto ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un presupuesto ha sido eliminado con el identificador {{ param }}",
             "delete": {
-                "question": "¿Seguro que quiere eliminar Budget {{ id }}?"
+                "question": "¿Seguro que quiere eliminar el presupuesto {{ id }}?"
             },
             "detail": {
-                "title": "Budget"
+                "title": "Presupuesto"
             },
-            "date": "Date",
-            "body": "Body",
-            "grossCost": "Gross Cost",
-            "tax": "Tax",
-            "company": "Company"
+            "date": "Fecha",
+            "body": "Contenido",
+            "grossCost": "Coste bruto",
+            "tax": "Impuesto",
+            "company": "Empresa"
         }
     }
 }

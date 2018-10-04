@@ -2,7 +2,7 @@
     "invoisterApp": {
         "SecureConnection" : {
             "null": "",
-            "NONE": "NONE",
+            "NONE": "Ninguna",
             "SSL": "SSL",
             "TLS": "TLS"
         }

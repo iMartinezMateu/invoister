@@ -4,15 +4,15 @@
         "invoice" : {
             "home": {
                 "title": "Invoices",
-                "createLabel": "Create a new Invoice",
-                "createOrEditLabel": "Create or edit a Invoice",
-                "search": "Search for Invoice"
+                "createLabel": "Create a new invoice",
+                "createOrEditLabel": "Create or edit a invoice",
+                "search": "Search for invoice"
             },
-            "created": "A new Invoice is created with identifier {{ param }}",
-            "updated": "A Invoice is updated with identifier {{ param }}",
-            "deleted": "A Invoice is deleted with identifier {{ param }}",
+            "created": "A new invoice is created with identifier {{ param }}",
+            "updated": "An invoice is updated with identifier {{ param }}",
+            "deleted": "An invoice is deleted with identifier {{ param }}",
             "delete": {
-                "question": "Are you sure you want to delete Invoice {{ id }}?"
+                "question": "Are you sure you want to delete in voice{{ id }}?"
             },
             "detail": {
                 "title": "Invoice"

@@ -2,9 +2,9 @@
     "invoisterApp": {
         "PaymentForm" : {
             "null": "",
-            "PAYPAL": "PAYPAL",
-            "BANKTRANSFER": "BANKTRANSFER",
-            "OTHER": "OTHER"
+            "PAYPAL": "PayPal",
+            "BANKTRANSFER": "Transferencia bancaria",
+            "OTHER": "Otro"
         }
     }
 }

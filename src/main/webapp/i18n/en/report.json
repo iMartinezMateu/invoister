@@ -4,20 +4,20 @@
         "report" : {
             "home": {
                 "title": "Reports",
-                "createLabel": "Create a new Report",
-                "createOrEditLabel": "Create or edit a Report",
-                "search": "Search for Report"
+                "createLabel": "Create a new report",
+                "createOrEditLabel": "Create or edit a report",
+                "search": "Search for report"
             },
-            "created": "A new Report is created with identifier {{ param }}",
-            "updated": "A Report is updated with identifier {{ param }}",
-            "deleted": "A Report is deleted with identifier {{ param }}",
+            "created": "A new report is created with identifier {{ param }}",
+            "updated": "A report is updated with identifier {{ param }}",
+            "deleted": "A report is deleted with identifier {{ param }}",
             "delete": {
-                "question": "Are you sure you want to delete Report {{ id }}?"
+                "question": "Are you sure you want to delete report {{ id }}?"
             },
             "detail": {
                 "title": "Report"
             },
-            "rId": "R Id",
+            "rId": "Report Identification Number",
             "date": "Date",
             "body": "Body",
             "company": "Company"

@@ -3,28 +3,28 @@
     "invoisterApp": {
         "invoice" : {
             "home": {
-                "title": "Invoices",
-                "createLabel": "Crear nuevo Invoice",
-                "createOrEditLabel": "Crear o editar Invoice",
-                "search": "Search for Invoice"
+                "title": "Facturas",
+                "createLabel": "Crear nueva factura",
+                "createOrEditLabel": "Crear o editar factura",
+                "search": "Buscar por factura"
             },
-            "created": "Un nuevo Invoice ha sido creado con el identificador {{ param }}",
-            "updated": "Un Invoice ha sido actualizado con el identificador {{ param }}",
-            "deleted": "Un Invoice ha sido eliminado con el identificador {{ param }}",
+            "created": "Una nueva factura ha sido creado con el identificador {{ param }}",
+            "updated": "Una factura ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Una factura ha sido eliminado con el identificador {{ param }}",
             "delete": {
-                "question": "¿Seguro que quiere eliminar Invoice {{ id }}?"
+                "question": "¿Seguro que quiere eliminar la factura {{ id }}?"
             },
             "detail": {
-                "title": "Invoice"
+                "title": "Factura"
             },
-            "date": "Date",
-            "tax": "Tax",
-            "paymentForm": "Payment Form",
-            "paymentDetails": "Payment Details",
-            "paymentDate": "Payment Date",
-            "status": "Status",
-            "company": "Company",
-            "invoiceItem": "Invoice Item"
+            "date": "Fecha",
+            "tax": "Impuestos",
+            "paymentForm": "Forma de pago",
+            "paymentDetails": "Detalles de pago",
+            "paymentDate": "Fecha límite para el pago",
+            "status": "Estado",
+            "company": "Empresa",
+            "invoiceItem": "Elemento a facturar"
         }
     }
 }

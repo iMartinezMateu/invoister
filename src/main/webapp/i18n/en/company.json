@@ -4,21 +4,21 @@
         "company" : {
             "home": {
                 "title": "Companies",
-                "createLabel": "Create a new Company",
-                "createOrEditLabel": "Create or edit a Company",
-                "search": "Search for Company"
+                "createLabel": "Create a new company",
+                "createOrEditLabel": "Create or edit a company",
+                "search": "Search for company"
             },
-            "created": "A new Company is created with identifier {{ param }}",
-            "updated": "A Company is updated with identifier {{ param }}",
-            "deleted": "A Company is deleted with identifier {{ param }}",
+            "created": "A new company is created with identifier {{ param }}",
+            "updated": "A company is updated with identifier {{ param }}",
+            "deleted": "A company is deleted with identifier {{ param }}",
             "delete": {
-                "question": "Are you sure you want to delete Company {{ id }}?"
+                "question": "Are you sure you want to delete company {{ id }}?"
             },
             "detail": {
                 "title": "Company"
             },
             "title": "Title",
-            "cId": "C Id",
+            "cId": "Company Identification Number",
             "mainPhoneNumber": "Main Phone Number",
             "secondaryPhoneNumber": "Secondary Phone Number",
             "email": "Email",

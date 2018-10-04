@@ -4,21 +4,21 @@
         "costumer" : {
             "home": {
                 "title": "Costumers",
-                "createLabel": "Create a new Costumer",
-                "createOrEditLabel": "Create or edit a Costumer",
-                "search": "Search for Costumer"
+                "createLabel": "Create a new costumer",
+                "createOrEditLabel": "Create or edit a costumer",
+                "search": "Search for costumer"
             },
             "created": "A new Costumer is created with identifier {{ param }}",
             "updated": "A Costumer is updated with identifier {{ param }}",
             "deleted": "A Costumer is deleted with identifier {{ param }}",
             "delete": {
-                "question": "Are you sure you want to delete Costumer {{ id }}?"
+                "question": "Are you sure you want to delete costumer {{ id }}?"
             },
             "detail": {
                 "title": "Costumer"
             },
             "name": "Name",
-            "cId": "C Id",
+            "cId": "Costumer Identification Number",
             "address": "Address",
             "phone": "Phone",
             "email": "Email",

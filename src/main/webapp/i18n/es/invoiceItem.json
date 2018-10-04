@@ -3,24 +3,24 @@
     "invoisterApp": {
         "invoiceItem" : {
             "home": {
-                "title": "Invoice Items",
-                "createLabel": "Crear nuevo Invoice Item",
-                "createOrEditLabel": "Crear o editar Invoice Item",
-                "search": "Search for Invoice Item"
+                "title": "Elementos a facturar",
+                "createLabel": "Crear nuevo elemento a facturar",
+                "createOrEditLabel": "Crear o editar elemento a facturar",
+                "search": "Buscar por elemento a facturar"
             },
-            "created": "Un nuevo Invoice Item ha sido creado con el identificador {{ param }}",
-            "updated": "Un Invoice Item ha sido actualizado con el identificador {{ param }}",
-            "deleted": "Un Invoice Item ha sido eliminado con el identificador {{ param }}",
+            "created": "Un nuevo elemento a facturar ha sido creado con el identificador {{ param }}",
+            "updated": "Un elemento a facturar ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un elemento a facturar ha sido eliminado con el identificador {{ param }}",
             "delete": {
-                "question": "¿Seguro que quiere eliminar Invoice Item {{ id }}?"
+                "question": "¿Seguro que quiere eliminar el elemento a facturar con identificador {{ id }}?"
             },
             "detail": {
-                "title": "Invoice Item"
+                "title": "Elemento a facturar"
             },
-            "description": "Description",
-            "quantity": "Quantity",
-            "grossCost": "Gross Cost",
-            "invoice": "Invoice"
+            "description": "Descripción",
+            "quantity": "Cantidad",
+            "grossCost": "Coste en bruto",
+            "invoice": "Factura"
         }
     }
 }

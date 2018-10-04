@@ -3,36 +3,36 @@
     "invoisterApp": {
         "company" : {
             "home": {
-                "title": "Companies",
-                "createLabel": "Crear nuevo Company",
-                "createOrEditLabel": "Crear o editar Company",
-                "search": "Search for Company"
+                "title": "Empresas",
+                "createLabel": "Crear nueva empresa",
+                "createOrEditLabel": "Crear o editar empresa",
+                "search": "Buscar empresa"
             },
-            "created": "Un nuevo Company ha sido creado con el identificador {{ param }}",
-            "updated": "Un Company ha sido actualizado con el identificador {{ param }}",
-            "deleted": "Un Company ha sido eliminado con el identificador {{ param }}",
+            "created": "Una nueva empresa ha sido creado con el identificador {{ param }}",
+            "updated": "Una empresa ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Una empresa ha sido eliminado con el identificador {{ param }}",
             "delete": {
-                "question": "¿Seguro que quiere eliminar Company {{ id }}?"
+                "question": "¿Seguro que quiere eliminar la empresa {{ id }}?"
             },
             "detail": {
-                "title": "Company"
+                "title": "Empresa"
             },
-            "title": "Title",
-            "cId": "C Id",
-            "mainPhoneNumber": "Main Phone Number",
-            "secondaryPhoneNumber": "Secondary Phone Number",
-            "email": "Email",
-            "address": "Address",
-            "paypalAccount": "Paypal Account",
-            "bankAccount": "Bank Account",
-            "logo": "Logo",
-            "secondaryLogo": "Secondary Logo",
-            "stamp": "Stamp",
-            "notificator": "Notificator",
-            "costumer": "Costumer",
-            "invoice": "Invoice",
-            "budget": "Budget",
-            "report": "Report"
+            "title": "Titulo",
+            "cId": "Número de identificación de la empresa",
+            "mainPhoneNumber": "Número de teléfono principal",
+            "secondaryPhoneNumber": "Número de teléfono secundario",
+            "email": "Dirección de correo electrónico",
+            "address": "Domicilio de la empresa",
+            "paypalAccount": "Cuenta de PayPal de la empresa",
+            "bankAccount": "Cuenta bancaria de la empresa",
+            "logo": "Logo de la empresa",
+            "secondaryLogo": "Logo secundario",
+            "stamp": "Sello de la empresa",
+            "notificator": "Notificador",
+            "costumer": "Cliente",
+            "invoice": "Factura",
+            "budget": "Presupuesto",
+            "report": "Informe"
         }
     }
 }

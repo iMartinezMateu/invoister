@@ -4,22 +4,22 @@
         "notificator" : {
             "home": {
                 "title": "Notificators",
-                "createLabel": "Create a new Notificator",
-                "createOrEditLabel": "Create or edit a Notificator",
-                "search": "Search for Notificator"
+                "createLabel": "Create a new notificator",
+                "createOrEditLabel": "Create or edit a notificator",
+                "search": "Search for notificator"
             },
-            "created": "A new Notificator is created with identifier {{ param }}",
-            "updated": "A Notificator is updated with identifier {{ param }}",
-            "deleted": "A Notificator is deleted with identifier {{ param }}",
+            "created": "A new notificator is created with identifier {{ param }}",
+            "updated": "A notificator is updated with identifier {{ param }}",
+            "deleted": "A notificator is deleted with identifier {{ param }}",
             "delete": {
                 "question": "Are you sure you want to delete Notificator {{ id }}?"
             },
             "detail": {
                 "title": "Notificator"
             },
-            "smtpHost": "Smtp Host",
-            "smtpPort": "Smtp Port",
-            "smtpAuth": "Smtp Auth",
+            "smtpHost": "Server address",
+            "smtpPort": "Server port",
+            "smtpAuth": "Use authentication",
             "username": "Username",
             "password": "Password",
             "secureConnection": "Secure Connection",

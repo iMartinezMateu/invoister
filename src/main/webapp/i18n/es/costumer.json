@@ -3,26 +3,26 @@
     "invoisterApp": {
         "costumer" : {
             "home": {
-                "title": "Costumers",
-                "createLabel": "Crear nuevo Costumer",
-                "createOrEditLabel": "Crear o editar Costumer",
-                "search": "Search for Costumer"
+                "title": "Clientes",
+                "createLabel": "Crear nuevo cliente",
+                "createOrEditLabel": "Crear o editar cliente",
+                "search": "Buscar por cliente"
             },
             "created": "Un nuevo Costumer ha sido creado con el identificador {{ param }}",
             "updated": "Un Costumer ha sido actualizado con el identificador {{ param }}",
             "deleted": "Un Costumer ha sido eliminado con el identificador {{ param }}",
             "delete": {
-                "question": "¿Seguro que quiere eliminar Costumer {{ id }}?"
+                "question": "¿Seguro que quiere eliminar el cliente con el identificador {{ id }}?"
             },
             "detail": {
-                "title": "Costumer"
+                "title": "Cliente"
             },
-            "name": "Name",
-            "cId": "C Id",
-            "address": "Address",
-            "phone": "Phone",
-            "email": "Email",
-            "company": "Company"
+            "name": "Nombre",
+            "cId": "Número de identificación del cliente",
+            "address": "Domicilio del cliente",
+            "phone": "Número de teléfono del cliente",
+            "email": "Dirección de correo electrónico del cliente",
+            "company": "Empresa"
         }
     }
 }

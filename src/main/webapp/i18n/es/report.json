@@ -3,24 +3,24 @@
     "invoisterApp": {
         "report" : {
             "home": {
-                "title": "Reports",
-                "createLabel": "Crear nuevo Report",
-                "createOrEditLabel": "Crear o editar Report",
+                "title": "Informes",
+                "createLabel": "Crear nuevo informe",
+                "createOrEditLabel": "Crear o editar informe",
                 "search": "Search for Report"
             },
-            "created": "Un nuevo Report ha sido creado con el identificador {{ param }}",
-            "updated": "Un Report ha sido actualizado con el identificador {{ param }}",
-            "deleted": "Un Report ha sido eliminado con el identificador {{ param }}",
+            "created": "Un nuevo informe ha sido creado con el identificador {{ param }}",
+            "updated": "Un informe ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un informe ha sido eliminado con el identificador {{ param }}",
             "delete": {
-                "question": "¿Seguro que quiere eliminar Report {{ id }}?"
+                "question": "¿Seguro que quiere eliminar el informe {{ id }}?"
             },
             "detail": {
-                "title": "Report"
+                "title": "Informe"
             },
-            "rId": "R Id",
-            "date": "Date",
-            "body": "Body",
-            "company": "Company"
+            "rId": "Número de identificación del informe",
+            "date": "Fecha",
+            "body": "Contenido",
+            "company": "Empresa"
         }
     }
 }
